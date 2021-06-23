@@ -6,7 +6,7 @@ programa
 	      inteiro dias,meses,anos,idadeD
 	      inteiro a,b
 
-	      escreva("a baixo sera solicitado sua idade completa em anos, meses e anos, favor seguie essa ordem\n")
+	      escreva("a baixo sera solicitado sua idade completa em anos, meses e anos, favor seguir essa ordem\n")
 
 	      escreva("quantos anos você tem ?\n")
 	      leia(anos)
@@ -32,7 +32,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 248; 
+ * @POSICAO-CURSOR = 190; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
