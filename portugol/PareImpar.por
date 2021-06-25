@@ -3,25 +3,36 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro seg,horas,minutos, seg2
+		inteiro numero,div
 
-		escreva("Qual a duração do evento em segundos ?\n")
-		leia(seg)
+		escreva("Digite um numero inteiro positivo\n")
+		leia(numero)
 
-		horas = seg / 3600
-		minutos = (seg % 3600) / 60
-		seg2 = (seg % 3600) % 60
+		div = numero % 2
 
-		escreva("O tempo do seu evento foi de " +horas+ " horas " +minutos+ " minutos e " +seg2+ " segundos")
+		se(div == 0){
+			escreva("Esse número é par\n")
+				
+			}
+		}
+		senao{
+			escreva("Esse número é ímpar\n")
+		}
+		se(numero > 0){
+			
+           escreva("Positivo")
 		
 	}
+	    senao {
+	    	 escreva("Negativo")
+	    }
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 296; 
+ * @POSICAO-CURSOR = 217; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
