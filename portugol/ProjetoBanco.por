@@ -4,9 +4,9 @@ programa
 	funcao inicio()
 	{
 		inteiro movimentos = 0
-		real saldo, saldo1, valorD, valorC
+		real saldo, saldo1, valorD, valorC, valorEmprestimo, totEmprestimo = 10000
 		cadeia continuar , interesse, movimento
-		saldo = 100
+		saldo = 0
 		faca{
 			movimentos++
 			escreva (" Ai-taú \n")
@@ -37,21 +37,24 @@ programa
 		se(movimentos%2 != 0){
 			escreva("\nGostariamos de lembrar que você é especial a nós,\n")
 			escreva("por isso liberamos um empréstimo exlusivo para você no valor de R$10000")
-			escreva("\nTem interesse ?")
+			escreva("\n e você ainda tem ",totEmprestimo, " para pedir")
+			escreva("\nTem interesse ? ")
 		}
 		senao{
-			escreva("\nEmpréstimo de até R$10000,00 agora, deseja ? !!")
+			escreva("\nEmpréstimo de até R$10000,00 agora, !!")
+			escreva("\n e você ainda tem ",totEmprestimo, " deseja ? ")
 			
 			
 		}
 		leia(interesse)
-		escreva(interesse)
+		//escreva(interesse)
 
-		
-		
-		
-		
-		
+		se(interesse == "S" ou interesse == "s"){
+			escreva("Qual o valor do empréstimo ? ")
+			leia(valorEmprestimo)
+			saldo = saldo + valorEmprestimo
+			totEmprestimo = 10000 - valorEmprestimo
+		}
 		
 		escreva("\nDeseja continuar ?")
 		leia(continuar)
@@ -60,7 +63,12 @@ programa
 			
 		}enquanto(movimentos < 10 e (continuar == "S" ou continuar =="s"))
 
-		escreva("Fim do programa")
+		escreva (" Ai-taú \n")
+		escreva ("\n Dinheiro na mão é vendaval \n\n\n")
+
+		escreva("Obrigado por utilizar o nosso banco\n")
+		escreva("Seu saldo final foi de R$",saldo, " com ainda R$",totEmprestimo," para pedir")
+		
 
 		
 
@@ -72,7 +80,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 638; 
+ * @POSICAO-CURSOR = 1687; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
