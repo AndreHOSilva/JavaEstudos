@@ -68,6 +68,9 @@ programa
 
 		escreva("Obrigado por utilizar o nosso banco\n")
 		escreva("Seu saldo final foi de R$",saldo, " com ainda R$",totEmprestimo," para pedir")
+          Util
+
+		inicio()
 		
 
 		
@@ -80,7 +83,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1687; 
+ * @POSICAO-CURSOR = 1732; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
