@@ -320,7 +320,7 @@ programa
 						
 								escreva("Obrigado por utilizar o nosso banco\n")
 								escreva("Seu saldo final foi de R$",saldo, " com ainda R$",totEmprestimo," para pedir")
-						          escreva("Gostaria de voltar ao menu principal ?")
+						          escreva("\nGostaria de voltar ao menu principal ?")
 						          leia(voltar)
 						
 						          se(voltar =="S" ou voltar== "s"){
@@ -426,7 +426,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2816; 
+ * @POSICAO-CURSOR = 8739; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
