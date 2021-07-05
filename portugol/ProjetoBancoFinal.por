@@ -100,12 +100,12 @@ programa
 				cadeia sair = "n" 
 				real saldo = 0.00
 				cadeia  movimento
-				inteiro talao = 3//1talao = - 30,00 no saldo
+				inteiro talao = 3, numTaloes//1talao = - 30,00 no saldo
 				real valorD
 				real valorC
 				inteiro contador = 0
 				real saldoFinal
-				cadeia pedirTalao
+				cadeia pedirTalao, voltar
 		          limpa()		
 				faca { 
 						contador ++
@@ -142,8 +142,21 @@ programa
 						leia(pedirTalao)
 						 
 						 se (pedirTalao == "s" ou pedirTalao == "S"){
-									 saldo = saldo - 30
+						 	escreva("Qual o número de talões ?")
+						 	leia(numTaloes)
+						 	se(numTaloes == 1){
+						 		saldo = saldo - 30
 									 talao = talao - 1
+						 	}
+						 	senao se(numTaloes == 2){
+						 		saldo = saldo - 60
+									 talao = talao - 2
+						 	}
+						 	senao{
+						 		saldo = saldo - 90
+								 talao = talao - 3
+						 	}
+									 
 							pare
 						 }
 							
@@ -160,6 +173,13 @@ programa
 						escreva ("\nSeu saldo final é de: ",saldo, "\n")
 						escreva("\nVocê ainda tem: ",talao, " talões disponíveis.\n")
 						escreva("\nObrigado e volte sempre!!\n ")
+						escreva("\nGostaria de voltar ao menu principal ?")
+			    			leia(voltar)
+						
+						se(voltar =="S" ou voltar== "s"){
+						limpa()
+			     		inicio()
+						}
 			
 			}
                   senao se(numSelecionado ==3){
@@ -391,6 +411,7 @@ programa
 						escreva("Obrigado por utilizar o nosso banco\n")
 						escreva("\nVoltando ao menu principal")
 						Util.aguarde(3000)
+						limpa()
 						inicio()
 						
           			}
@@ -405,7 +426,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 11022; 
+ * @POSICAO-CURSOR = 2816; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
