@@ -51,14 +51,14 @@ programa
 					saldo = saldo1
 			
 					}
-					senao se (movimento == "C"){
+					senao se (movimento == "C" e saldo > 0){
 					escreva("Valor : ")
 					leia(valorC)
 					saldo1 = saldo + valorC
 					saldo = saldo1
 					}
 					senao{
-						escreva("\nValor na conta insuficiente")
+						escreva("\nOperação Inválida")
 					}
 					//funcao inteiro dia_mes_atual()
 					inteiro dia = Calendario.dia_mes_atual()
@@ -74,11 +74,11 @@ programa
 						
 					}
 					senao{
-						escreva("Ainda não é a data de aniversário da sua conta")
+						escreva("\nAinda não é a data de aniversário da sua conta")
 					}
 					}
 					senao{
-						escreva("Seu saldo já foi atualizado esse mês")
+						escreva("\nSeu saldo já foi atualizado esse mês")
 					}
 					
 					
@@ -134,14 +134,14 @@ programa
 								saldo = saldoFinal
 			
 					}
-					senao se (movimento == "C"){
+					senao se (movimento == "C" e saldo > 0){
 						escreva("Valor: ")
 						leia(valorC)
 						saldoFinal = saldo + valorC
 						saldo = saldoFinal
 					}
 					senao{
-						escreva("\nValor na conta insuficiente")
+						escreva("\nOperação Inválida")
 					}
 	/*escreva("\nVocê gostaria de retirar talões de cheque? Será debitado 30r$ por talão!\n ")
 	leia(pedirTalao)*/
@@ -290,7 +290,7 @@ programa
 									saldo = saldo1
 									
 								}
-								senao se(movimento == "C"){
+								senao se(movimento == "C" e saldo > 0){
 									escreva("Valor : ")
 									leia(valorC)
 									saldo1 = saldo + valorC
@@ -368,7 +368,7 @@ programa
 							saldo = saldo1
 							
 						}
-						senao se(movimento == "C"){
+						senao se(movimento == "C" e saldo > 0){
 							escreva("Valor : ")
 							leia(valorC)
 							saldo1 = saldo + valorC
@@ -443,7 +443,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 10314; 
+ * @POSICAO-CURSOR = 3801; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
