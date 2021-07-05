@@ -44,18 +44,21 @@ programa
 					escreva("\nMOVIMENTO - D-débito ou C-crédito : ")
 					leia(movimento)
 
-					se(movimento == "D"){
+					se(movimento == "D" e saldo > 0){
 					escreva("Valor : ")
 					leia(valorD)
 					saldo1 = saldo - valorD
 					saldo = saldo1
 			
 					}
-					senao{
+					senao se (movimento == "C"){
 					escreva("Valor : ")
 					leia(valorC)
 					saldo1 = saldo + valorC
 					saldo = saldo1
+					}
+					senao{
+						escreva("\nValor na conta insuficiente")
 					}
 					//funcao inteiro dia_mes_atual()
 					inteiro dia = Calendario.dia_mes_atual()
@@ -64,8 +67,8 @@ programa
 					escreva("\nDigite o aniversário da sua conta :\n")
 					leia(diaAniversario)
 					//limpa()
-
-					se(dia == diaAniversario){
+					se(movimentos == 1){
+						se(dia == diaAniversario){
 						escreva("Seu saldo será atualizado")
 						saldo = (saldo * 0.05)+saldo
 						
@@ -73,6 +76,11 @@ programa
 					senao{
 						escreva("Ainda não é a data de aniversário da sua conta")
 					}
+					}
+					senao{
+						escreva("Seu saldo já foi atualizado esse mês")
+					}
+					
 					
 					
 					
@@ -119,18 +127,21 @@ programa
 						escreva("\nMOVIMENTO - D-débito ou C-crédito : ")
 						leia(movimento)
 
-					se(movimento == "D" ou movimento == "d"){
+					se(movimento == "D" ou movimento == "d" e saldo > 0){
 								escreva("Valor : ")
 								leia(valorD)
 								saldoFinal = saldo - valorD
 								saldo = saldoFinal
 			
 					}
-					senao{
+					senao se (movimento == "C"){
 						escreva("Valor: ")
 						leia(valorC)
 						saldoFinal = saldo + valorC
 						saldo = saldoFinal
+					}
+					senao{
+						escreva("\nValor na conta insuficiente")
 					}
 	/*escreva("\nVocê gostaria de retirar talões de cheque? Será debitado 30r$ por talão!\n ")
 	leia(pedirTalao)*/
@@ -272,18 +283,21 @@ programa
 								escreva("\nMOVIMENTO - D-débito ou C-crédito : ")
 								leia(movimento)
 						
-								se(movimento == "D"){
+								se(movimento == "D" e saldo > 0){
 									escreva("Valor : ")
 									leia(valorD)
 									saldo1 = saldo - valorD
 									saldo = saldo1
 									
 								}
-								senao{
+								senao se(movimento == "C"){
 									escreva("Valor : ")
 									leia(valorC)
 									saldo1 = saldo + valorC
 									saldo = saldo1
+								}
+								senao{
+									escreva("\n Peça um empréstimo\n")
 								}
 						
 								se(movimentos%2 != 0){
@@ -347,18 +361,21 @@ programa
 						escreva("\nMOVIMENTO - D-débito ou C-crédito : ")
 						leia(movimento)
 				
-						se(movimento == "D"){
+						se(movimento == "D" e saldo > 0){
 							escreva("Valor : ")
 							leia(valorD)
 							saldo1 = saldo - valorD
 							saldo = saldo1
 							
 						}
-						senao{
+						senao se(movimento == "C"){
 							escreva("Valor : ")
 							leia(valorC)
 							saldo1 = saldo + valorC
 							saldo = saldo1
+						}
+						senao{
+							escreva("\nRecorra ao empréstimo\n")
 						}
 				
 						se(movimentos%2 != 0){
@@ -426,7 +443,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 8739; 
+ * @POSICAO-CURSOR = 10314; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
