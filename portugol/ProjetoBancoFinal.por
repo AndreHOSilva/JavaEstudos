@@ -57,21 +57,19 @@ programa
 							saldo = saldo1
 							escreva("\nDigite o aniversário da sua conta :\n")
 							leia(diaAniversario)
+							inteiro dia = Calendario.dia_mes_atual()
 							//limpa()
-								se(movimentos >= 1){
-									inteiro dia = Calendario.dia_mes_atual()
+								se(dia == diaAniversario){
+									
 									escreva("Data de hoje é "+dia+" que coincide com aniversário\n")
 									se(dia == diaAniversario){
 										escreva("Seu saldo será atualizado em 5%\n")
 										saldo = (saldo * 0.05)+saldo
 						
 									}
-									senao{
-										escreva("\nAinda não é a data de aniversário da sua conta")
-									}
 								}
 								senao{
-									escreva("\nSeu saldo já foi atualizado esse mês")
+									escreva("\nNão é do dia de aniversário da sua conta")
 								}
 							}
 							senao{
@@ -143,8 +141,8 @@ programa
      					escreva ("\n Dinheiro na mão é vendaval \n\n\n")	
 
      					escreva("\nBEM VINDO A CONTA CONTA CORRENTE\n")
-     					escreva("\nSaldo atual: ",saldo)
-     					escreva("\nQUANTIDADE DE: ",talao, " talões \n")
+     					escreva("Saldo atual: ",saldo)
+     					escreva("\nQUANTIDADE DE: ",talao, " talões")
 
 						escreva("\nMOVIMENTO - D-débito ou C-crédito : ")
 						leia(movimento)
@@ -220,10 +218,10 @@ programa
 						limpa()
 						escreva (" Ai-taú \n")
      					escreva ("\n Dinheiro na mão é vendaval \n\n\n")	
-						escreva ("\nSeu saldo final é de: ",saldo, "\n")
-						escreva("\nVocê ainda tem: ",talao, " talões disponíveis.\n")
-						escreva("\nObrigado e volte sempre!!\n ")
-						escreva("\nGostaria de voltar ao menu principal ?")
+						escreva ("Seu saldo final é de: ",saldo, "\n")
+						escreva("Você ainda tem: ",talao, " talões disponíveis.\n")
+						escreva("Obrigado e volte sempre!!\n")
+						escreva("Gostaria de voltar ao menu principal ?")
 			    			leia(voltar)
 						
 						se(voltar =="S" ou voltar== "s"){
@@ -252,12 +250,12 @@ programa
 						leia(valor)
 					
 		
-				se(movimento == "D" ou movimento == "d" e valor > 0 e valor <= saldo){
+				se((movimento == "D" ou movimento == "d") e valor > 0 e valor < saldo){
 					
 					saldo1 = saldo - valor
 					saldo = saldo1
 				}
-				senao se (movimento == "C" ou movimento == "c" e valor > 0) {
+				senao se ((movimento == "C" ou movimento == "c") e valor > 0) {
 							saldo1 = saldo + valor
 							saldo = saldo1
 						}
@@ -345,12 +343,12 @@ programa
 								se(movimentos%2 != 0){
 									escreva("\nGostariamos de lembrar que você é especial a nós,\n")
 									escreva("por isso liberamos um empréstimo exlusivo para você no valor de R$10000")
-									escreva("\n e você ainda tem ",totEmprestimo, " para pedir")
+									escreva("\ne você ainda tem ",totEmprestimo, " para pedir")
 									escreva("\nTem interesse ? ")
 								}
 								senao{
 									escreva("\nEmpréstimo de até R$10000,00 agora, !!")
-									escreva("\n e você ainda tem ",totEmprestimo, " deseja ? ")
+									escreva("\ne você ainda tem ",totEmprestimo, " deseja ? ")
 									
 									
 								}
@@ -365,11 +363,11 @@ programa
 								se(interesse == "S" ou interesse == "s" e totEmprestimo > 0 e valorEmprestimo <=totEmprestimo){
 									
 									saldo = saldo + valorEmprestimo
-									totEmprestimo = 10000 - valorEmprestimo
+									totEmprestimo = totEmprestimo - valorEmprestimo
 								}
 								senao se(interesse == "S" ou interesse == "s" e totEmprestimo >= 0 ){
-									escreva("\n Seu empréstimo ja foi todo solicitado ou,\n")
-									escreva(" o valor é acima do autorizado")
+									escreva("\nSeu empréstimo ja foi todo solicitado ou,\n")
+									escreva("o valor é acima do autorizado")
 								}
 								
 								escreva("\nDeseja continuar ?\n")
@@ -434,12 +432,12 @@ programa
 						se(movimentos%2 != 0){
 							escreva("\nGostariamos de lembrar que confiamos nos seus estudos,\n")
 							escreva("por isso liberamos um empréstimo exlusivo para você investir nele no valor de R$5000")
-							escreva("\n e você ainda tem ",totEmprestimo, " para solicitar")
+							escreva("\ne você ainda tem ",totEmprestimo, " para solicitar")
 							escreva("\nTem interesse ? ")
 						}
 						senao{
 							escreva("\nEmpréstimo de até R$5000,00 agora, queremos investir no seu conhecimento !!")
-							escreva("\n e você ainda tem ",totEmprestimo, " quer solicitar ? ")
+							escreva("\ne você ainda tem ",totEmprestimo, " quer solicitar ? ")
 							
 							
 						}
@@ -450,11 +448,11 @@ programa
 				
 						se(interesse == "S" ou interesse == "s" e totEmprestimo > 0 e valorEmprestimo <=totEmprestimo){
 							saldo = saldo + valorEmprestimo
-							totEmprestimo = 5000 - valorEmprestimo
+							totEmprestimo = totEmprestimo - valorEmprestimo
 						}
 						senao se(interesse == "S" ou interesse == "s" e totEmprestimo >= 0){
-							escreva("\n Seu empréstimo ja foi todo solicitado ou,\n")
-							escreva(" o valor é acima do autorizado")
+							escreva("\nSeu empréstimo ja foi todo solicitado ou,\n")
+							escreva("o valor é acima do autorizado")
 						}
 						
 						escreva("\nDeseja continuar ?")
@@ -500,7 +498,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5539; 
+ * @POSICAO-CURSOR = 7123; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

@@ -9,30 +9,26 @@ public class Exercicio2 {
 		
 		int numero, contador = 0,numeroPar = 0 , contador2 = 0 , numeroImpar = 0 ;
 		
-		for(int a = 1; a <=3; a++) {
+		for(int a = 0; a <= 11; a++) {
 			System.out.println("Digite um número : ");
 			numero = x.nextInt() ;
+			a++ ;
 			
 			if(numero % 2 ==0) {
-				numeroPar = numero ;
 				
 				contador++ ;
 			}
 			else {
-				numeroImpar = numero ;
 				contador2++ ;
-				System.out.printf("\nEsses são os ímpares a baixo, e o total foi de %d:\n" ,contador2);
-				System.out.printf("\n%d\n",numeroImpar) ;
+				//System.out.printf("\nEsses são os ímpares a baixo, e o total foi de %d:\n" ,contador2);
+				//9
+				//System.out.printf("\n%d\n",numeroImpar) ;
 			}
 		}
-		System.out.printf("\nEsses são os pares a baixo, e o total foi de %d:\n" ,contador);
-		System.out.printf("\n%d\n",numeroPar) ;
+		System.out.printf("\nO total de pares foi de %d\n" ,contador);
 		
-		System.out.printf("\nEsses são os ímpares a baixo, e o total foi de %d:\n" ,contador2);
-		System.out.printf("\n%d\n",numeroImpar) ;
+		System.out.printf("\nO total de ímpares foi de %d\n" ,contador2);
 		
-		
-
 	}
 
 }
