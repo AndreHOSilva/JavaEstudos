@@ -2,7 +2,7 @@ programa
 {
 	
 	funcao inicio()
-	{	
+	{	
 		inteiro teclado, soma = 0
 		
 		
