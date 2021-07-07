@@ -37,6 +37,9 @@ programa
 					saldo = 0
 					
 				}
+				senao se(valor <= 0){
+					escreva("\nOpção Inválida\n")
+				}
 				senao se (limite == 0){
 					escreva("\nVocê não possui mais limite\n")
 				}
@@ -63,7 +66,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 894; 
+ * @POSICAO-CURSOR = 33; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
