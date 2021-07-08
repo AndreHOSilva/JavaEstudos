@@ -12,13 +12,7 @@ public class LojaEmJava {
 		//int codigo[] = {1,2,3,4,5,6,7,8,9,10} ;
 		//int estoque[] = {10,10,10,10,10,10,10,10,10,10} ;
 		String nome , continuar ;
-		int carrinho[] = {1,2,3,4,5,6,7,8,9,10} ;
-		//int  x = 0 ;
-		//System.out.println("Digite seu nome : ");
-		//nome = leia.next();
-		
-		//System.out.println("Digite  a posição do produto desejado : ");
-		//carrinho[] = leia.hashCode() ;
+		int carrinho[] = new int[10];
 		
 		String produtos[] = {"a","b","c","d","e","f","g","h","i","j"} ;
 		int precos[] = {10,11,12,13,14,15,16,17,18,19,20} ;
@@ -35,24 +29,19 @@ public class LojaEmJava {
 			else {
 				System.out.printf("G3-0%d  %s  %d  %d\n",codigo[x],produtos[x],precos[x],estoque[x]);
 			}
+			System.out.println("Qual o número do código produto desejado ?");
 			
 			
+		System.out.println("Qual o código do produto ?");
+		
+		
+		
+		}
+		/*for(int x=0;x<10;x++) {
+			System.out.println("Qual o código do produto ?");
+			carrinho[x]=leia.nextInt() ;
 			
-			
-			
-			
-			//System.out.println("Digite a quantidade desejada");
-			
-			
-			//if((carrinho[x] == codigo[x]) && estoque[x] > 0 ) {
-				//System.out.printf("Você selecionou a opação G3-0%d");
-				
-				//System.out.println("Continuar ?");
-				//continuar = leia.next() ;
-				
-				
-			//}
-		}//while(x <10) ;
+		*/}
 		
 		
 		
