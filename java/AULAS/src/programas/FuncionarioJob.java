@@ -24,7 +24,7 @@ public class FuncionarioJob {
 		Funcionario1.beneficios = true;
 		Funcionario1.uniforme = true;
 		
-		System.out.println("Digite seu mês de férias");
+		System.out.println("Digite seu mês de férias :");
 		Funcionario1.mesferias = leia.nextInt();
 		
 		System.out.println("Digite numero da sua carteira de trabalho :");
