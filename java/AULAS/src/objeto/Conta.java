@@ -1,4 +1,4 @@
-package obejeto;
+package objeto;
 
 public class Conta {
 	private double  saldo ;

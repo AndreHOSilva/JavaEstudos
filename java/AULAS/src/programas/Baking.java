@@ -2,7 +2,7 @@ package programas;
 
 import java.util.Scanner;
 
-import obejeto.Conta;
+import objeto.Conta;
 
 public class Baking {
 

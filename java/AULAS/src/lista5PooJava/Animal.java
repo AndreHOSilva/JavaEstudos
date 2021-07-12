@@ -34,7 +34,7 @@ public class Animal {
 	
 	//encapsulamento
 	
-	public String getNome(String nome) {
+	public String getNome() {
 		return nome;
 	}
 

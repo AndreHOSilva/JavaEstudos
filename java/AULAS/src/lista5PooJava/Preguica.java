@@ -18,7 +18,7 @@ public class Preguica extends Animal {
 	}
 	
 	public void preguica() {
-		if(super.getPelos()&& getSubirArvore() ) {
+		if(super.getPelos() && getSubirArvore() ) {
 			 System.out.println("É Preguica"); ;
 		}else {
 			System.out.println("É OUTRO ANIMAL");

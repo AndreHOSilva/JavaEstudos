@@ -2,7 +2,7 @@ package programas;
 
 import java.util.Scanner;
 
-import obejeto.Patinete;
+import objeto.Patinete;
 
 public class Patinildo {
 	//Crie uma classe patinete e apresente os atributos e métodos referentes

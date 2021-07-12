@@ -1,4 +1,4 @@
-package obejeto;
+package objeto;
 
 public class Patinete {
 		public int rodas ;

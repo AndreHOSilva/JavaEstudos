@@ -2,7 +2,7 @@ package programas;
 
 import java.util.Scanner;
 
-import obejeto.Cliente;
+import objeto.Cliente;
 
 public class CadCliente {
 	//1) Crie uma classe cliente e apresente os atributos e métodos referentes

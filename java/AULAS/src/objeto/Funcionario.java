@@ -1,4 +1,4 @@
-package obejeto;
+package objeto;
 
 public class Funcionario {
 	public double salario ;

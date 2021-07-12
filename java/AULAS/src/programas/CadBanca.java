@@ -2,7 +2,7 @@ package programas;
 
 import java.util.Scanner;
 
-import obejeto.Pessoa;
+import objeto.Pessoa;
 
 public class CadBanca {
 

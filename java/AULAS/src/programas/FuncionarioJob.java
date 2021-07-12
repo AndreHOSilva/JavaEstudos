@@ -2,7 +2,7 @@ package programas;
 
 import java.util.Scanner;
 
-import obejeto.Funcionario;
+import objeto.Funcionario;
 
 public class FuncionarioJob {
 

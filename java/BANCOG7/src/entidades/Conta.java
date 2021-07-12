@@ -78,12 +78,12 @@ public class Conta {
 	public void menu() {
 		System.out.println("----------------------------------");
 		System.out.println("Bem vindo ao nosso banco Ai-Taú G7");
-		System.out.println("Onde dinheiro na mão é vendal !!!!");
+		System.out.println("Onde dinheiro na mão é vendaval !!!!");
 		System.out.println("----------------------------------");
 	}
 	public void extrato() {
 		System.out.println("----------------------------------");
-		System.out.printf("-----Seu saldo é de R$%f",getsaldo(),"-------");
+		System.out.printf("-----Seu saldo é de R$%.2f",getsaldo(),"-------");
 		System.out.println("----------------------------------");
 	}
 

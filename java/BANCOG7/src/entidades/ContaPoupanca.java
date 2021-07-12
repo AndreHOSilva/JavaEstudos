@@ -21,6 +21,19 @@ public class ContaPoupanca extends Conta {
 		this.diaAniversario = diaAniversario;
 	}
 	
+	@Override
+	public void menu() {
+		System.out.println("------------------------------------");
+		System.out.println("Bem vindo a conta poupança Ai-Taú G7");
+		System.out.println("Onde dinheiro na mão é vendaval !!!!");
+		System.out.println("------------------------------------");
+	}
+	
+	
+	
+	
+
+	
 	public void corrigir() {
 		if(diaAniversario == 10) {
 			//super.getsaldo();
@@ -32,17 +45,10 @@ public class ContaPoupanca extends Conta {
 			super.extrato();
 		}
 		else {
-			super.menu();
+			menu();
 			System.out.println("Ainda não é o dia do aniversário da sua conta");
 		}
-		
-		
-		
-		
-		
 	}
-	
-	
 	
 	
 
