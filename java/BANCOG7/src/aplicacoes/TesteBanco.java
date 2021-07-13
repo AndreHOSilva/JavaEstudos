@@ -12,19 +12,20 @@ public class TesteBanco {
 		Scanner leia = new Scanner(System.in);
 		
 		String a ,a1 ;
-		int x1,desejo ;
+		int x1,desejo,c ;
 		double valor,valor2 ;
 		
+		c = 3;
 		System.out.println("Ola Digite seu nome :");
 		a1 = leia.next();
 		
 		System.out.println("Agora digite sua idade :");
 		x1=leia.nextInt();
 		
-		Conta c1 = new Conta(a1,1234);
 		ContaPoupanca c2 = new ContaPoupanca(a1,x1);
 		ContaEmpresarial c3 = new ContaEmpresarial(a1,x1);
 		
+		c3.extrato();
 		
 		
 		c3.menu();
@@ -52,18 +53,20 @@ public class TesteBanco {
 			}else {
 				System.out.println("Seu limite de emprestimo ja foi atingido");
 				c3.extrato();
-				break ;
+				//break ;
 			}
-			
+			return ;
 		}
+		c2.extrato();
 		
-		
-		
-
 		
 		
 		
 
+		
+		
+		
+		
 	}
-
+	
 }

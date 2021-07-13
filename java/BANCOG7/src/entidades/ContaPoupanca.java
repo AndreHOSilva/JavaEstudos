@@ -21,7 +21,8 @@ public class ContaPoupanca extends Conta {
 		this.diaAniversario = diaAniversario;
 	}
 	
-	@Override
+	
+	
 	public void menu() {
 		System.out.println("------------------------------------");
 		System.out.println("Bem vindo a conta poupança Ai-Taú G7");
@@ -39,7 +40,6 @@ public class ContaPoupanca extends Conta {
 			//super.getsaldo();
 			//super.setsaldo((this.getsaldo())+(this.getsaldo()*correcao)) ;
 			super.setsaldo((super.getsaldo()*correcao)+(super.getsaldo()));
-			super.menu();
 			System.out.println("Por ser aniversario da sua conta seu saldo será atualizado");
 			System.out.println("Com um juros exclusivo de 5%");
 			super.extrato();

@@ -22,7 +22,12 @@ public class ContaEmpresarial extends Conta {
 		this.disponivelEmprestimo = disponivelEmprestimo;
 	}
 	
-	
+	public void menu() {
+		System.out.println("---------------------------------------");
+		System.out.println("Bem vindo a conta empresarial Ai-Taú G7");
+		System.out.println("Onde dinheiro na mão é vendaval!!!!!!!!");
+		System.out.println("---------------------------------------");
+	}
 	public void emprestimo(double valorEmprestimo) {
 		if(disponivelEmprestimo >= valorEmprestimo) {
 			  

@@ -1,6 +1,6 @@
 package entidades;
 
-public class Conta {
+public abstract class  Conta {
 	
 	private double saque ;
 	private double deposito ;
@@ -75,12 +75,7 @@ public class Conta {
 			System.out.printf("Operação realizada com sucesso...Seu novo saldo é R$%f",saldo);
 		}
 	}
-	public void menu() {
-		System.out.println("----------------------------------");
-		System.out.println("Bem vindo ao nosso banco Ai-Taú G7");
-		System.out.println("Onde dinheiro na mão é vendaval !!!!");
-		System.out.println("----------------------------------");
-	}
+	
 	public void extrato() {
 		System.out.println("----------------------------------");
 		System.out.printf("-----Seu saldo é de R$%.2f",getsaldo(),"-------");
