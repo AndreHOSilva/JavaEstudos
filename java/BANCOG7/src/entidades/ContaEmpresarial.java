@@ -57,7 +57,12 @@ public class ContaEmpresarial extends Conta {
 			System.out.println("Você não tem limite de empréstimo para isso");
 		}
 	}
-			
+	public void extrato() {
+		System.out.println("----------------------------------");
+		System.out.println("--------------Extrato-------------");
+		System.out.printf("---Seu saldo é de R$%.2f",saldo);
+		System.out.println("\n----------------------------------");
+	}		
 	
 	
 }

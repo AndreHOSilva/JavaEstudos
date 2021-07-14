@@ -33,7 +33,7 @@ public class ContaContaCorrente extends Conta {
 			this.saldo = saldo - valor;
 			
 			System.out.printf("Operação realizada com sucesso...");
-			System.out.printf("Seu novo saldo é R$%.2f",saldo);
+			System.out.printf("\nSeu novo saldo é R$%.2f",saldo);
 			
 		}
 	}
@@ -50,22 +50,29 @@ public class ContaContaCorrente extends Conta {
 	}
 	
 	public void tirarTalao(int quantidade) {
-		if(quantidade == 1 && getTaloes() >=1 ) {
+		if(quantidade == 1 && getTaloes() >=1 && saldo >= 30 ) {
 			setTaloes(this.taloes = this.taloes -1) ;
 			sacar(30);
 		}
-		else if(quantidade == 2 && getTaloes() >= 2) {
+		else if(quantidade == 2 && getTaloes() >= 2 && saldo >= 60) {
 			setTaloes(this.taloes=this.taloes -2) ;
 			sacar(60);
 		}
-		else if(quantidade == 3 && getTaloes() == 3) {
+		else if(quantidade == 3 && getTaloes() == 3 && saldo >= 90) {
 			setTaloes(this.taloes = this.taloes -3) ;
 			sacar(90);
 		
 		}
 		else {
-			System.out.println("Você não tem saldo suficiente");
+			System.out.println("Você não tem saldo suficiente ou limite");
+			System.out.println("de talões atingido");
 		}
+	}
+	public void extrato() {
+		System.out.println("----------------------------------");
+		System.out.println("--------------Extrato-------------");
+		System.out.printf("---Seu saldo é de R$%.2f",saldo);
+		System.out.println("\n----------------------------------");
 	}
 	
 	

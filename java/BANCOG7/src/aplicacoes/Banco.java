@@ -37,14 +37,14 @@ public class Banco {
 			
 			
 			if(opInicial ==1) {
-				for(int w = 0; w<10;w++) {
+				for(int w = 0; w<=10;w++) {
 					
 				
 				
 				menus.menu1();
 				
 				System.out.println("Qual operação deseja fazer?");
-				System.out.println("[1]DEPÓSITO [2]SAQUE");
+				System.out.println("[1]DEPÓSITO [2]SAQUE [3]EXTRATO");
 				op = leia.nextInt();
 				
 				if(op == 1) {
@@ -62,6 +62,8 @@ public class Banco {
 					System.out.println("Qual o valor do Saque ?");
 					valor = leia.nextDouble();
 					c1.sacar(valor);
+				}else {
+					c1.extrato();
 				}
 				
 				System.out.println("\nDeseja continuar ? [1]Sim [2]Não");
@@ -77,10 +79,10 @@ public class Banco {
 				}
 			}
 			else if(opInicial == 2) {
-				for(int z=0;z<10;z++) {
+				for(int z=0;z<=10;z++) {
 					menus.menu2();
 					System.out.println(" Qual operação deseja fazer?  ");
-					System.out.println("[1]Depósito [2]Saque [3]Talões");
+					System.out.println("[1]Depósito [2]Saque [3]Talões [4]Extrato");
 					op = leia.nextInt();
 					
 					if(op == 1) {
@@ -100,8 +102,11 @@ public class Banco {
 						x = leia.nextInt() ;
 						c2.tirarTalao(x);
 					}
+					else {
+						c2.extrato();
+					}
 					
-					System.out.println("Deseja continuar ? 1-Sim 2-Não");
+					System.out.println("\nDeseja continuar ? 1-Sim 2-Não");
 					op = leia.nextInt();
 					menus.pularLinha();
 					
@@ -116,27 +121,33 @@ public class Banco {
 				
 			}
 			else if(opInicial == 3) {
-				for(int b=0;b<10;b++) {
+				for(int b=0;b<=10;b++) {
 					menus.menu3();
 					System.out.println("Qual operação deseja fazer?");
-					System.out.println("[1]Deposito [2]Saque");
+					System.out.println("[1]Deposito [2]Saque [3]Extrato");
 					System.out.println("Você tem R$"+c3.getLimite()+ " de limite");
 					op = leia.nextInt();
 					
-					System.out.println("Qual o valor do depósito/saque ?");
-					valor = leia.nextDouble();
+					if(op == 1 || op ==2) { 
+						System.out.println("Qual o valor do depósito/saque ?");
+					   
+					}
+					 
+						
 					
 					if(op == 1) {
-						
+						valor = leia.nextDouble();
 						c3.depositar(valor);
 						
 						
 					}
 					else if(op == 2) {
-						
+						valor = leia.nextDouble();
 						c3.sacar(valor);
 					}
-					
+					else {
+						c3.extrato();
+					}
 					System.out.println("\nDeseja continuar ?");
 					System.out.println("[1]Sim [2]não");
 					op = leia.nextInt();
@@ -151,10 +162,10 @@ public class Banco {
 				
 			}
 			else if(opInicial == 4) {
-				for(int b=0;b<10;b++) {
+				for(int b=0;b<=10;b++) {
 					menus.menu4();
 					System.out.println("Qual operação deseja fazer ?");
-					System.out.println("[1]Depósito [2]Saque [3]Empréstimo");
+					System.out.println("[1]Depósito [2]Saque [3]Empréstimo [4]Extrato");
 					System.out.println("Lembre-se você tem um valor de R$"+c4.getDisponivelEmprestimo()+" para empréstimo");
 					op = leia.nextInt();
 					
@@ -174,7 +185,9 @@ public class Banco {
 						valor = leia.nextDouble();
 						c4.emprestimo(valor);
 					}
-					
+					else {
+						c4.extrato();
+					}
 					System.out.println("\nDeseja continuar ?");
 					System.out.println("[1]Sim [2]Não");
 					op = leia.nextInt();
@@ -189,10 +202,10 @@ public class Banco {
 				
 			}
 			else if(opInicial == 5) {
-				for(int b=0;b<10;b++) {
+				for(int b=0;b<=10;b++) {
 					menus.menu5();
 					System.out.println("Qual operação deseja fazer ?");
-					System.out.println("[1]Depósito [2]Saque [3]Empréstimo");
+					System.out.println("[1]Depósito [2]Saque [3]Empréstimo [4]Extrato");
 					System.out.println("Lembre-se você tem um valor de R$"+c5.getDisponivelEmprestimoEstudantil()+" para empréstimo");
 					op = leia.nextInt();
 					
@@ -211,6 +224,9 @@ public class Banco {
 						System.out.println("Qual o valor do empréstimo");
 						valor = leia.nextDouble();
 						c5.emprestimo(valor);
+					}
+					else {
+						c5.extrato();
 					}
 					
 					System.out.println("Deseja continuar ?");

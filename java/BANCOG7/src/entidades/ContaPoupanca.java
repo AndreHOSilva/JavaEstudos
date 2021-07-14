@@ -75,6 +75,12 @@ public class ContaPoupanca extends Conta {
 			System.out.println("Ainda não é o dia do aniversário da sua conta");
 		}
 	}
+	public void extrato() {
+		System.out.println("----------------------------------");
+		System.out.println("--------------Extrato-------------");
+		System.out.printf("---Seu saldo é de R$%.2f",saldo);
+		System.out.println("\n----------------------------------");
+	}
 	
 	
 

@@ -62,6 +62,11 @@ public class ContaEspecial extends Conta {
 		depositar(valor);
 		
 	}*/
-	
+	public void extrato() {
+		System.out.println("----------------------------------");
+		System.out.println("--------------Extrato-------------");
+		System.out.printf("---Seu saldo é de R$%.2f",saldo);
+		System.out.println("\n----------------------------------");
+	}
 
 }
