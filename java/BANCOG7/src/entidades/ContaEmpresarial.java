@@ -3,16 +3,12 @@ package entidades;
 public class ContaEmpresarial extends Conta {
 	
 	
-	private double disponivelEmprestimo = 10000 ;
+	private double disponivelEmprestimo =10000 ;
 
-	public ContaEmpresarial(String nome, int conta, double disponivelEmprestimo) {
-		super(nome, conta);
-		this.disponivelEmprestimo = disponivelEmprestimo;
+	public ContaEmpresarial(double saldo, int conta,double disponivelEmprestimo) {
+		super( conta,saldo);
 	}
 	
-	public ContaEmpresarial(String nome, int conta) {
-		super(nome, conta);
-	}
 
 	public double getDisponivelEmprestimo() {
 		return disponivelEmprestimo;
@@ -22,22 +18,40 @@ public class ContaEmpresarial extends Conta {
 		this.disponivelEmprestimo = disponivelEmprestimo;
 	}
 	
-	public void menu() {
-		System.out.println("---------------------------------------");
-		System.out.println("Bem vindo a conta empresarial Ai-Taú G7");
-		System.out.println("Onde dinheiro na mão é vendaval!!!!!!!!");
-		System.out.println("---------------------------------------");
+
+	@Override
+	public void sacar(double valor) {
+		if(valor <= 0) {
+			System.out.println("Por favor digite um valor válido");
+		}
+		else if(valor > saldo) {
+			System.out.println("Você não tem saldo suficiente para essa operação");
+		}
+		else {
+			this.saldo = saldo - valor;
+			System.out.printf("Operação realizada com sucesso...Seu novo saldo é R$%f",saldo);
+		}
+	}
+	@Override
+	public void depositar(double valor) {
+		if(valor <= 0) {
+			System.out.println("Por favor digite um valor válido");
+		}else {
+			this.saldo = this.saldo + valor ;
+			
+			System.out.printf("Operação realizada com sucesso...Seu novo saldo é R$%f",saldo);
+		}
 	}
 	public void emprestimo(double valorEmprestimo) {
 		if(disponivelEmprestimo >= valorEmprestimo) {
 			  
-			super.depositar(valorEmprestimo);
+			depositar(valorEmprestimo);
 			
 			setDisponivelEmprestimo( disponivelEmprestimo) ;
 			System.out.println("Seu empréstimo foi aprovado com sucesso");
 			
 			setDisponivelEmprestimo(getDisponivelEmprestimo()-valorEmprestimo);
-			super.extrato();
+			
 		}else {
 			System.out.println("Você não tem limite de empréstimo para isso");
 		}

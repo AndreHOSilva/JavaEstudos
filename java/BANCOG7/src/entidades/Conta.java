@@ -6,19 +6,22 @@ public abstract class  Conta {
 	private double deposito ;
 	private String nome ;
 	private int conta ;
-	private double saldo ;
+	protected double saldo ;
 	
 	//contrutor
-	public Conta(String nome, int conta) {
+	public Conta( int conta,double saldo) {
 		super();
-		this.nome = nome;
+		this.saldo = saldo;
 		this.conta = conta;
 	}
-	public Conta(double saque, double deposito,double saldo) {
+	/*public Conta(double saque, double deposito,double saldo) {
 		super();
 		this.saque = saque;
 		this.deposito = deposito;
 		this.saldo = saldo ;
+	}
+	*/
+	public Conta() {
 	}
 	
 	//encapsulamento get e set
@@ -61,27 +64,27 @@ public abstract class  Conta {
 			System.out.println("Você não tem saldo suficiente para essa operação");
 		}
 		else {
-			this.saldo = saldo - valor ;
+			saldo = saldo - valor;
 			System.out.printf("Operação realizada com sucesso...Seu novo saldo é R$%f",saldo);
 		}
 	}
-	
 	public void depositar(double valor) {
 		if(valor <= 0) {
 			System.out.println("Por favor digite um valor válido");
 		}else {
-			this.saldo = this.saldo + valor ;
+			saldo = saldo + valor ;
 			
-			System.out.printf("Operação realizada com sucesso...Seu novo saldo é R$%f",saldo);
+			System.out.printf("Operação realizada com sucesso...Seu novo saldo é R$%.2f",saldo);
 		}
 	}
 	
 	public void extrato() {
 		System.out.println("----------------------------------");
-		System.out.printf("-----Seu saldo é de R$%.2f",getsaldo(),"-------");
+		System.out.printf("-----Seu saldo é de R$%.2f",saldo,"-------");
 		System.out.println("----------------------------------");
 	}
-
+	
+	
 	
 	
 

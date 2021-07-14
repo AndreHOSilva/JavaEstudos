@@ -1,8 +1,9 @@
-package aplicacoes;
+/*package aplicacoes;
 
 import java.util.Scanner;
 
 import entidades.Conta;
+import entidades.ContaContaCorrente;
 import entidades.ContaEmpresarial;
 import entidades.ContaPoupanca;
 
@@ -10,63 +11,85 @@ public class TesteBanco {
 
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);
-		
-		String a ,a1 ;
+		String a ,a1,s ;
 		int x1,desejo,c ;
 		double valor,valor2 ;
 		
-		c = 3;
-		System.out.println("Ola Digite seu nome :");
-		a1 = leia.next();
+		//c = 3;
+		//System.out.println("Ola Digite seu nome :");
+		//a1 = leia.next();
 		
-		System.out.println("Agora digite sua idade :");
-		x1=leia.nextInt();
-		
-		ContaPoupanca c2 = new ContaPoupanca(a1,x1);
-		ContaEmpresarial c3 = new ContaEmpresarial(a1,x1);
-		
-		c3.extrato();
+		//System.out.println("Agora digite sua idade :");
+		//x1=leia.nextInt();
 		
 		
-		c3.menu();
-		System.out.println("Qual op vc deseja fazer ? 1-Depósito 2-Saque");
-		desejo = leia.nextInt();
 		
-		System.out.println("Qual valor gostaria de depositar ?");
-		valor=leia.nextInt() ;
-		c3.depositar(valor);
 		
-		//System.out.println("Qual o dia aniversário da conta ?");
-		//x = leia.nextInt();
-		//c2.setDiaAniversario(x) ;
-		for(int x=0;x<=4;x++) {
-			if(c3.getDisponivelEmprestimo()> 0) {
-				System.out.println("Emprestimo ?");
-				a = leia.next();
+		
+		for(int xx = 1 ; xx<=6;xx++) {
+			ContaPoupanca c2 = new ContaPoupanca("a",2);
+			ContaEmpresarial c3 = new ContaEmpresarial("b",2);
+			ContaContaCorrente c4 = new ContaContaCorrente("c",3,3);
+			
+			
+			
+			
+			
+			
+			//System.out.println("Qual o dia aniversário da conta ?");
+			//x = leia.nextInt();
+			//c2.setDiaAniversario(x) ;
+			for(int x=0;x<=4;x++) {
+				System.out.println(c4.getSaldo2());
+				//c4.menu();
+				System.out.println("Qual op vc deseja fazer ? 1-Depósito 2-Saque");
+				desejo = leia.nextInt();
 				
-				if(a.equals("sim")) {
-					valor = leia.nextDouble();
-					c3.emprestimo(valor);
+				System.out.println("Qual valor gostaria de depositar ?");
+				valor=leia.nextInt() ;
+				c4.depositar(valor);
+				System.out.println("Quer tirar talao ?");
+				s = leia.next();
+				
+				if(s.equals("sim") && c4.getTaloes() >= 1) {
+					if(c4.getSaldo2() >=90 ) {
+						System.out.println("Quantos taloes deseja ?");
+						c=leia.nextInt() ;
+						c4.tirarTalao(c);
+					}
+					else if(c4.getSaldo2() >= 60 && c4.getSaldo2() < 90) {
+						System.out.println("Você só pode tirar 2 taloes");
+						c4.tirarTalao(2);
+					}
+					else {
+						System.out.println("Seu saldo só permite um talão");
+						c4.tirarTalao(1);
 					
-					System.out.println(c3.getDisponivelEmprestimo());
+					}
+					System.out.println("Desejar continuar ?");
+					s = leia.next();
+					if(s.equals("nao")) {
+						//c4.extrato();
+						
+						break;
+						
+						
+					}
 				}
-			}else {
-				System.out.println("Seu limite de emprestimo ja foi atingido");
-				c3.extrato();
-				//break ;
+				
+				
+				
+				
+				
+				
 			}
-			return ;
+			System.out.println("Fim de programa");
+			
+			
+			main(args);
+			
 		}
-		c2.extrato();
+		}
 		
-		
-		
-		
-
-		
-		
-		
-		
-	}
 	
-}
+}*/
