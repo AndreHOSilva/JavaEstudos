@@ -15,7 +15,7 @@ public class Teste2 {
 		double salario = 2000.48587 ; //%f
 		
 		System.out.println(nome+ " nasceu em " +anoNascimento+ " do sexo " +sexo);
-		System.out.printf("%s seu salario é %.2f",nome,salario);
+		System.out.printf("%s seu salario é %.3f",nome,salario);
 		/*% ponto com número depois no printf eu controlo as casas decimais e tambem o printf 
 		formata o texto de acordo com a configuração do meu windons e printf você pode concatenar
 		com a vírgula

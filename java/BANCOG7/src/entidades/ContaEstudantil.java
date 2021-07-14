@@ -31,7 +31,8 @@ public class ContaEstudantil extends Conta {
 		}
 		else {
 			this.saldo = saldo - valor;
-			System.out.printf("Operação realizada com sucesso...Seu novo saldo é R$%f",saldo);
+			System.out.printf("Operação realizada com sucesso...");
+			System.out.printf("\nSeu novo saldo é R$%.2f",saldo);
 		}
 	}
 	@Override
@@ -41,7 +42,8 @@ public class ContaEstudantil extends Conta {
 		}else {
 			this.saldo = this.saldo + valor ;
 			
-			System.out.printf("Operação realizada com sucesso...Seu novo saldo é R$%f",saldo);
+			System.out.printf("Operação realizada com sucesso...");
+			System.out.printf("\nSeu novo saldo é R$%.2f",saldo);
 		}
 	}
 	
@@ -51,7 +53,6 @@ public class ContaEstudantil extends Conta {
 			depositar(valorEmprestimo2);
 			
 			setDisponivelEmprestimoEstudantil( disponivelEmprestimoEstudantil) ;
-			System.out.println("Seu empréstimo foi aprovado com sucesso");
 			
 			setDisponivelEmprestimoEstudantil(getDisponivelEmprestimoEstudantil()-valorEmprestimo2);
 		}else {

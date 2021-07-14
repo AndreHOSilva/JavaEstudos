@@ -45,7 +45,8 @@ public class ContaPoupanca extends Conta {
 		}
 		else {
 			this.saldo = saldo - valor;
-			System.out.printf("Operação realizada com sucesso...Seu novo saldo é R$%f",saldo);
+			System.out.printf("Operação realizada com sucesso...");
+			System.out.printf("Seu novo saldo é R$%.2f",saldo,"\n");
 		}
 	}
 	@Override
@@ -55,7 +56,8 @@ public class ContaPoupanca extends Conta {
 		}else {
 			this.saldo = this.saldo + valor ;
 			
-			System.out.printf("Operação realizada com sucesso...Seu novo saldo é R$%f",saldo);
+			System.out.printf("Operação realizada com sucesso..");
+			System.out.printf("\nSeu novo saldo é R$%.2f",saldo);
 		}
 	}
 
@@ -65,8 +67,9 @@ public class ContaPoupanca extends Conta {
 			//super.getsaldo();
 			//super.setsaldo((this.getsaldo())+(this.getsaldo()*correcao)) ;
 			saldo = (saldo * correcao) + saldo ;
-			System.out.println("Por ser aniversario da sua conta seu saldo será atualizado");
+			System.out.println("\nPor ser aniversario da sua conta seu saldo será atualizado\n");
 			System.out.println("Com um juros exclusivo de 5%");
+			System.out.printf("Portanto seu saldo ficou em R$%.2f",saldo);
 		}
 		else {
 			System.out.println("Ainda não é o dia do aniversário da sua conta");

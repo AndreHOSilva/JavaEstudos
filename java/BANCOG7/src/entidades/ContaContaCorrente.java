@@ -32,7 +32,9 @@ public class ContaContaCorrente extends Conta {
 			
 			this.saldo = saldo - valor;
 			
-			System.out.printf("Operação realizada com sucesso...Seu novo saldo é R$%f",saldo);
+			System.out.printf("Operação realizada com sucesso...");
+			System.out.printf("Seu novo saldo é R$%.2f",saldo);
+			
 		}
 	}
 	@Override
@@ -42,7 +44,8 @@ public class ContaContaCorrente extends Conta {
 		}else {
 			this.saldo = this.saldo + valor ;
 			
-			System.out.printf("Operação realizada com sucesso...Seu novo saldo é R$%f",saldo);
+			System.out.printf("Operação realizada com sucesso...");
+			System.out.printf("Seu novo saldo é R$%.2f",saldo);
 		}
 	}
 	

@@ -78,11 +78,6 @@ public abstract class  Conta {
 		}
 	}
 	
-	public void extrato() {
-		System.out.println("----------------------------------");
-		System.out.printf("-----Seu saldo é de R$%.2f",saldo,"-------");
-		System.out.println("----------------------------------");
-	}
 	
 	
 	
