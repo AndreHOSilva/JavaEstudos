@@ -98,7 +98,7 @@ public class Banco {
 					}
 					else if(op ==3) {
 						System.out.println("Qual a quantidade de talões desejada ?\n");
-						System.out.println("Lembre que você tem"+c2.getTaloes());
+						System.out.println("Lembre que você tem "+c2.getTaloes()+" de talões");
 						x = leia.nextInt() ;
 						c2.tirarTalao(x);
 					}
