@@ -7,13 +7,12 @@ public class Exercicio1 {
 		
 		Scanner x = new Scanner(System.in) ;
 		int anos , meses, dias, a , b ;
-		
 		System.out.println("Digite sua idade : ");
 		anos = x.nextInt() ;
 		
 		a = anos * 365 ;
 		
-		System.out.println("Digite quantos meses se passaram depois do ultimo aniversário : ");
+		System.out.println("Digite quantos meses se passaram depois do ultimo aniversario : ");
 		meses = x.nextInt() ;
 		
 		b = meses * 30 ;
