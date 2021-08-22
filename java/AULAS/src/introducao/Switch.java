@@ -17,12 +17,19 @@ public class Switch {
         a = leia.nextInt();
 
         switch (a){
+            //o siwtch executa cases que estão presentes no bloco e sem o brake ele vai executar os abaixos tbm
             case 10 : case 9 : case 8 :
                 situacao = true ;
+                System.out.println("A");
+                break;
             case 7 : case 6 : case 5 :
                 situacao = false ;
+                System.out.println("B");
+                break;
             case 4 : case 3 : case 2 :
                 situacao = false ;
+                System.out.println("C");
+                break;
             default:
                 System.out.println("Sua situação já não tem solução");
 
