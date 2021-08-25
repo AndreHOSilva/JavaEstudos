@@ -27,6 +27,9 @@ public class Conta {
 		this.numero = numero;
 	}
 
+	public Conta() {
+
+	}
 
 
 	//encapsulamento get e set, quando quero proteção total retiro os set
