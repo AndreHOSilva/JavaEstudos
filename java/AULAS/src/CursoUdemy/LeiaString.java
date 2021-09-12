@@ -17,6 +17,7 @@ public class LeiaString {
         for(int x = 0 ; x < letras.length; x++){
             System.out.println(letras[x]);
         }
+        System.out.println("Teste");
 
 
     }
