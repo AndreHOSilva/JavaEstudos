@@ -24,13 +24,12 @@ public class Agenda {
         String y , x ;
 
         System.out.println("Qual o email e nome ?Digite nessa ordem");
-        y = leia.next() ;
-        x = leia.next();
+        y = leia.nextLine() ;
 
-        Contato contato = new Contato(y,x) ;
-        Contato contato2 = new Contato("mama","Jão") ;
+        Contato contato = new Contato(y) ;
+        //Contato contato2 = new Contato("mama","Jão") ;
         agenda.add(contato);
-        agenda.add(contato2) ;
+        //agenda.add(contato2) ;
 
         //System.out.println(contato);
         for (Object item : agenda) {

@@ -3,10 +3,15 @@ package objeto;
 public class Contato {
     private String email;
     private String nome;
+    private String contato2 ;
 
     public Contato(String email,String nome) {
         this.email = email;
         this.nome = nome ;
+    }
+
+    public Contato(String contato2) {
+        this.contato2 = contato2;
     }
 
     public String getEmail() {
@@ -27,6 +32,6 @@ public class Contato {
     //esse método é utilizado para trabalhar o objeto na hora dele ser mostrado no console
     @Override
     public String toString() {
-        return "Ola " + nome + " seu email é " + email + " e ja foi cadastrado com sucesso" ;
+        return "Ola " + contato2 + " seu email é " + email + " e ja foi cadastrado com sucesso" ;
     }
 }

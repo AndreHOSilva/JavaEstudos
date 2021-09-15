@@ -25,6 +25,7 @@ public class EstusoString {
         String sub = nome.substring(1);
         System.out.println(sub);
 
+
         System.out.println("Digite seu nome");
         x = leia.next().toUpperCase(Locale.ROOT);
 

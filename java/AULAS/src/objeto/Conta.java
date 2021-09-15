@@ -1,5 +1,7 @@
 package objeto;
 
+import java.util.Objects;
+
 public class Conta {
 	private double  saldo ;
 	private double limite ;
@@ -66,7 +68,21 @@ public class Conta {
 	//metodos
 	
 	//enquanto super aqui vou utilizar super. para trazer métodos de outras coisas qdo tenho uma conta mãe
-	
+
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Conta conta = (Conta) o;
+		return Double.compare(conta.saldo, saldo) == 0 && Double.compare(conta.limite, limite) == 0 && numero == conta.numero;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(saldo, limite, numero);
+	}
+
 	public void imprimirExtrato() {
 		System.out.println("Conta Nº"+numero);
 		System.out.printf("Seu saldo final foi de %f",saldo);
