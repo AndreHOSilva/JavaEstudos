@@ -15,7 +15,7 @@ public class Exercicio1 {
 			notas[x] = leia.nextInt() ;
 		}
 		for(int x = 0;x<4;x++) {
-			System.out.printf("\n%s obeteve nota %d na atividade",nomes[x].toUpperCase(),notas[x]);
+			System.out.printf("\n%s obteve nota %d na atividade",nomes[x].toUpperCase(),notas[x]);
 		}
 	}
 

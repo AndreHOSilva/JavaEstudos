@@ -1,14 +1,19 @@
 package objeto;
 
 public class Carro {
-	
+
+	/**
+	 * Atributos do objeto carro
+	 *
+	 */
 	public int tamanhoRodas ;
 	public String modelo ;
 	public double potenciaMotor ;
 	public String tipoBanco ;
 	public boolean ligado ;
 	public int velocidade ;
-	
+
+
 	//def de atributo = algo que é tem ou esta
 	
 	public void ligarCarro() {
