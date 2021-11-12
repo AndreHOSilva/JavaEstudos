@@ -27,8 +27,7 @@ public class CadChurras {
 		listaChurras.add("PICANHA");
 		listaChurras.add("ASA DE FRANGO");
 		listaChurras.add("LINGUIÇA APIMENTADINHA");
-		
-		
+
 		System.out.println("Tamanho atual da lista :"+listaChurras.size());
 				
 		for (String item : listaChurras) {

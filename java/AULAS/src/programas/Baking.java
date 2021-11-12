@@ -8,7 +8,7 @@ public class Baking {
 
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);
-		Conta cliente1 = new Conta(34);
+		Conta cliente1 = new Conta(34,"Ana Julia");
 		
 		int op ;
 		

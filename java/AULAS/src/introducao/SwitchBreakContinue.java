@@ -14,8 +14,8 @@ public class SwitchBreakContinue {
 
         switch (a) {
             //o siwtch executa cases que estão presentes no bloco e sem o brake ele vai executar os abaixos tbm
-            case 10:
-            case 9:
+            case 10: case 9:
+
             case 8:
                 situacao = "A";
                 break;

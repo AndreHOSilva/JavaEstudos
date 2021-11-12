@@ -1,17 +1,20 @@
 package objeto;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Conta {
 	private double  saldo ;
 	private double limite ;
 	private int numero ;
+	private String nome ;
 	
 	
 	//construtor pode fazer apenas um
-	public Conta(int numero) {
+	public Conta(int numero,String nome) {
 		super();
 		this.numero = numero;
+		this.nome = nome ;
 	}
 
 
@@ -70,6 +73,14 @@ public class Conta {
 	//enquanto super aqui vou utilizar super. para trazer métodos de outras coisas qdo tenho uma conta mãe
 
 
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
@@ -107,8 +118,11 @@ public class Conta {
 			System.out.printf("Operação realizada com sucesso, R$%f é o seu novo saldo",saldo);
 		}
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "Ola " + nome + " seu numero de conta é " + numero ;
+	}
 	
 	
 	
